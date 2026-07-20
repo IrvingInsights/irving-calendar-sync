@@ -133,7 +133,7 @@ COVER = f"""
 <div class="cover-sub"><strong>Plaintiff:</strong> Daniel N. Irving &nbsp;|&nbsp;
   <strong>Defendant:</strong> Julia Diaz Irving</div>
 <div class="cover-sub">Supreme Court of the State of New York &bull; Monroe County</div>
-<div class="cover-sub" style="font-style:italic;">Prepared July 2026 &mdash; Draft v3</div>
+<div class="cover-sub" style="font-style:italic;">Prepared July 2026 &mdash; Draft v4</div>
 <div class="wbox">
 <p><strong>NOT LEGAL ADVICE.</strong> These forms are filled with confirmed facts only.
 True underline blanks (<span style="display:inline-block;border-bottom:1px solid #000;
@@ -157,6 +157,9 @@ Custody: Joint legal custody of both children; primary physical with Defendant f
 joint physical for Hazel per existing schedule<br>
 Magnolia parenting time: Option A &mdash; &ldquo;to be determined upon agreement of the parties or petition to the court&rdquo;<br>
 UD-6 &sect;6b: <strong>Box B selected</strong> &mdash; court will determine all unsettled issues<br>
+Property: equitable distribution requested (court decides); former marital home foreclosed;
+Julia&rsquo;s pension + possible 401(k) are marital assets; QDRO required<br>
+Maintenance: Plaintiff seeks guideline maintenance per DRL &sect;236(B)(6)<br>
 No prior custody proceedings &bull; Defendant not in military service<br>
 Records: No Orders of Protection, no FCA Art. 10, not on Sex Offender registry<br>
 Plaintiff&rsquo;s income: <strong>SSDI $2,306.17/mo &times; 12 = $27,674.04/yr</strong> &bull;
@@ -165,11 +168,10 @@ Defendant&rsquo;s income: <strong>UNKNOWN &mdash; BLOCKS UD-8(2) and UD-8(3)</st
 <hr>
 <p><strong>Still needed before any form can be signed:</strong><br>
 &bull; Julia&rsquo;s health plan &mdash; unknown to Plaintiff (affects UD-2 &sect;FOURTH and UD-6 &sect;4 health boxes)<br>
-&bull; <strong>Property and maintenance checkboxes in UD-2 WHEREFORE &mdash; DO NOT WAIVE PROPERTY DISTRIBUTION</strong>;
-Julia may have a pension; attorney review strongly recommended before checking any property or maintenance box<br>
+&bull; Property: court will decide equitable distribution (Box B); former marital home foreclosed;
+Julia&rsquo;s pension and possible 401(k) are marital assets &mdash; <strong>QDRO required; attorney strongly recommended</strong><br>
+&bull; Maintenance: Plaintiff is seeking guideline maintenance; amount blocked pending Julia&rsquo;s income<br>
 &bull; All 4 SSN fields &mdash; fill by hand from tax records (Dan, Magnolia, Hazel, Julia)<br>
-&bull; Dan&rsquo;s current phone number on UD-1a<br>
-&bull; Dan to confirm 2-year continuous NY residency (UD-2 &sect;SECOND / UD-6 &sect;2 Box A) before swearing<br>
 &bull; <strong>Julia&rsquo;s income &mdash; blocks UD-8(2) and UD-8(3)</strong></p>
 <hr>
 <p><strong>Forms in this packet:</strong><br>
@@ -229,7 +231,7 @@ NOT RESOLVED BY A WRITTEN AGREEMENT BETWEEN THE PARTIES THAT IS SUBMITTED TO THE
     <div class="sig-lbl">{cb(True)}&nbsp;Plaintiff &nbsp; {cb()}&nbsp;Attorney(s) for Plaintiff</div>
   </div>
 </div>
-<p style="margin-top:0.15in;">Phone No.: {bl()} &nbsp; <em>[{ni('Dan&rsquo;s current phone number')}]</em></p>
+<p style="margin-top:0.15in;">Phone No.: {fi('585-202-7321')}</p>
 <p>Address: {DAN_ADDR}</p>
 </div>
 
@@ -255,9 +257,8 @@ alleges that the parties are over the age of 18 years and;</p>
 <p class="i1">{cb(True)}&nbsp;A) The {cb(True)}&nbsp;Plaintiff {cb()}&nbsp;Defendant has
 resided in New York State for a continuous period of at least two (2) years immediately
 preceding the commencement of this divorce action.</p>
-<div class="note">Box A checked: Dan has resided in Monroe County continuously; the marriage
-dates to 2002. Confirm with Dan that the two-year continuous-residency timeline holds before
-swearing to this. If any gap exists, check B, C, or D instead.</div>
+<div class="note">Box A checked. Dan confirmed no gaps in NY residency &mdash; continuous Monroe County
+resident well beyond the 2-year requirement. No alternative box needed.</div>
 <p class="i1 or">OR</p>
 <p class="i1">{cb()}&nbsp;B) The {cb()}&nbsp;Plaintiff {cb()}&nbsp;Defendant resided in New York
 State on the date of commencement and for a continuous period of one year immediately preceding,
@@ -322,14 +323,27 @@ the following ancillary relief:</p>
 <p>Plaintiff to claim {fi('Hazel E. Irving')} as tax dependent: {ni('pending Defendant&rsquo;s agreement')}</p>
 </div>
 
-<p class="i1">{cb()}&nbsp;Additional page describing ancillary relief is attached.</p>
-<p class="i1">{ni('Marital property &mdash; check one')}: {cb()}&nbsp;Property distributed per separation agreement/stipulation &nbsp; OR
+<p class="i1">{cb(True)}&nbsp;Additional page describing ancillary relief is attached.</p>
+<p class="i1"><strong>Marital property:</strong> Neither standard box below is checked because Plaintiff
+is <em>requesting equitable distribution through the court</em> (Box B), not waiving it and not
+proceeding under a settlement agreement. The additional-page checkbox above is checked to
+flag this to the court.</p>
+<p class="i1">{cb()}&nbsp;Property distributed per separation agreement/stipulation &nbsp; OR
 {cb()}&nbsp;I waive distribution of marital property.</p>
-<div class="warn"><strong>DO NOT CHECK &ldquo;waive distribution&rdquo; without attorney review.</strong>
-Julia may have a pension or other marital property. Waiving distribution is permanent and irreversible once judgment enters.
-Consult an attorney or DIY navigator before selecting either property box.</div>
-<p class="i1">{ni('Maintenance &mdash; check one')}: {cb()}&nbsp;I am not seeking maintenance as payee, other than what was agreed in a written agreement &nbsp; OR
-{cb()}&nbsp;I seek maintenance as payee as described in the Notice of Guideline Maintenance.</p>
+<div class="note"><strong>Property confirmed:</strong> Former marital home (20 Landing Rd S) was
+foreclosed &mdash; no equity to divide. Julia has a pension and possibly a 401(k) accumulated
+during the marriage; both are marital assets subject to equitable distribution. A QDRO
+(Qualified Domestic Relations Order) will be required to divide any pension or 401(k).
+<strong>Attorney assistance is strongly recommended before proceeding to judgment on property
+issues.</strong> Dan does NOT waive distribution.</div>
+<p class="i1"><strong>Maintenance:</strong> {cb()}&nbsp;I am not seeking maintenance as payee &nbsp; OR
+{cb(True)}&nbsp;I seek maintenance as payee as described in the Notice of Guideline Maintenance.</p>
+<div class="note">Maintenance box checked: Plaintiff seeks guideline maintenance. Whether Plaintiff
+qualifies and the amount depend on both parties&rsquo; incomes under DRL &sect;236(B)(6).
+With Plaintiff&rsquo;s income at $27,674/yr (SSDI) and Defendant employed (income unknown),
+Plaintiff likely qualifies &mdash; but the exact figure cannot be calculated until
+Julia&rsquo;s income is confirmed. Checking this box preserves the claim; it can be waived
+before judgment if the parties later agree or the formula yields $0.</div>
 <p class="i1">{cb()}&nbsp;NONE &mdash; I am not requesting any ancillary relief. <em>[Do NOT check if seeking custody, support, or property relief above.]</em></p>
 <p class="i1">AND any other relief the court deems fit and proper.</p>
 
@@ -367,7 +381,7 @@ and social security number is {ssn('Dan&rsquo;s')}. The Defendant&rsquo;s addres
 <p class="i1">{cb(True)}&nbsp;A) The {cb(True)}&nbsp;Plaintiff {cb()}&nbsp;Defendant has resided
 in New York State for a continuous period of at least two (2) years immediately preceding the
 commencement of this divorce action.
-<em>[Same note as UD-2 &sect;SECOND: Dan to confirm continuous 2-year timeline.]</em></p>
+<em>[Confirmed: no gaps in NY residency.]</em></p>
 <p class="i1 or">OR</p>
 <p class="i1">{cb()}&nbsp;B) The {cb()}&nbsp;Plaintiff {cb()}&nbsp;Defendant resided in NY on
 commencement date and for one year immediately preceding AND: a.{cb()}&nbsp;parties married in NY
@@ -445,6 +459,8 @@ Joint physical custody of {fi('Hazel E. Irving')}: with Plaintiff
 {fi('every other weekend, every Monday, every Tuesday until 4:00 p.m., and every Sunday')};
 remaining time with Defendant.<br>
 Child support per CSSA: {ni('BLOCKED &mdash; Defendant&rsquo;s income required')}<br>
+Guideline maintenance payable to Plaintiff per DRL &sect;236(B)(6): amount to be determined upon
+disclosure of Defendant&rsquo;s income.<br>
 {fi('Hazel E. Irving')} as Plaintiff&rsquo;s tax dependent: {ni('pending Defendant&rsquo;s agreement')}
 </div>
 
@@ -529,7 +545,9 @@ Child Abuse/Neglect Proceeding (FCA Art. 10)</p>
 Registration Act</p>
 
 <p><span class="pb">22.</span> {cb()}&nbsp;I acknowledge receipt of the Notice of Guideline
-Maintenance from the Court.</p>
+Maintenance from the Court. <em>[Check this box at filing after the Monroe County Clerk
+provides the Notice of Guideline Maintenance &mdash; do not check until you have actually
+received it.]</em></p>
 <p><span class="pb">23.</span> {cb()}&nbsp;I have been provided a copy of the Notice Relating
 to Health Care of the Parties.</p>
 
@@ -652,7 +670,7 @@ AND Julia&rsquo;s completed parallel column (currently UNKNOWN).
 HTML = f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8">
-<title>NYS Divorce Forms — Irving v. Diaz Irving — Draft v3</title>
+<title>NYS Divorce Forms — Irving v. Diaz Irving — Draft v4</title>
 <style>{CSS}</style>
 </head><body>
 {COVER}
