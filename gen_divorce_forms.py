@@ -133,7 +133,7 @@ COVER = f"""
 <div class="cover-sub"><strong>Plaintiff:</strong> Daniel N. Irving &nbsp;|&nbsp;
   <strong>Defendant:</strong> Julia Diaz Irving</div>
 <div class="cover-sub">Supreme Court of the State of New York &bull; Monroe County</div>
-<div class="cover-sub" style="font-style:italic;">Prepared July 2026 &mdash; Draft v4</div>
+<div class="cover-sub" style="font-style:italic;">Prepared July 2026 &mdash; Draft v5</div>
 <div class="wbox">
 <p><strong>NOT LEGAL ADVICE.</strong> These forms are filled with confirmed facts only.
 True underline blanks (<span style="display:inline-block;border-bottom:1px solid #000;
@@ -163,7 +163,7 @@ Maintenance: Plaintiff seeks guideline maintenance per DRL &sect;236(B)(6)<br>
 No prior custody proceedings &bull; Defendant not in military service<br>
 Records: No Orders of Protection, no FCA Art. 10, not on Sex Offender registry<br>
 Plaintiff&rsquo;s income: <strong>SSDI $2,306.17/mo &times; 12 = $27,674.04/yr</strong> &bull;
-Health: Plaintiff on Medicaid; children on CHP<br>
+Health: Plaintiff on Medicaid; children on Medicaid or Child Health Plus (CHP)<br>
 Defendant&rsquo;s income: <strong>UNKNOWN &mdash; BLOCKS UD-8(2) and UD-8(3)</strong></p>
 <hr>
 <p><strong>Still needed before any form can be signed:</strong><br>
@@ -293,7 +293,7 @@ spelling against the marriage certificate before signing.</div>
 <p class="i1">The Plaintiff resides at: {DAN_ADDR}</p>
 <p class="i1">The Defendant resides at: {JULIA_ADDR}</p>
 <p class="i1">The parties are covered by the following group health plans:</p>
-<p class="i2">Plaintiff: {fi('Medicaid')} <em>(government program &mdash; children covered by Child Health Plus/CHP under Plaintiff)</em></p>
+<p class="i2">Plaintiff: {fi('Medicaid')} <em>(government program &mdash; children covered by Medicaid or Child Health Plus (CHP), both government programs, under Plaintiff)</em></p>
 <p class="i2">Defendant: {ni('Julia&rsquo;s health plan &mdash; unknown to Plaintiff')}</p>
 <p class="i2">{cb()}&nbsp;Not Applicable &nbsp; {cb()}&nbsp;No health plans available through employment</p>
 <div class="note">Medicaid and CHP are government programs, not employer-sponsored group health plans.
@@ -437,7 +437,7 @@ claims custody or visitation rights with respect to such child(ren).
 {cb()}&nbsp;Yes &nbsp; {cb(True)}&nbsp;No <em>[Dan confirmed no prior custody proceedings.]</em></p>
 
 <p class="i1">The parties are covered by the following group health plans:</p>
-<p class="i2">Plaintiff: {fi('Medicaid')} <em>(children covered by Child Health Plus/CHP under Plaintiff)</em></p>
+<p class="i2">Plaintiff: {fi('Medicaid')} <em>(children covered by Medicaid or Child Health Plus (CHP), both government programs, under Plaintiff)</em></p>
 <p class="i2">Defendant: {ni('Julia&rsquo;s health plan &mdash; unknown to Plaintiff')}</p>
 <p class="i2">{cb()}&nbsp;Not Applicable. &nbsp;{cb()}&nbsp;No health plans available through employment.
 <em>[See note on UD-2 &sect;FOURTH re: Medicaid vs. employer group plan.]</em></p>
@@ -670,7 +670,7 @@ AND Julia&rsquo;s completed parallel column (currently UNKNOWN).
 HTML = f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8">
-<title>NYS Divorce Forms — Irving v. Diaz Irving — Draft v4</title>
+<title>NYS Divorce Forms — Irving v. Diaz Irving — Draft v5</title>
 <style>{CSS}</style>
 </head><body>
 {COVER}
